@@ -1,0 +1,32 @@
+{
+  "name": "chat-server",
+  "version": "1.0.0",
+  "description": "server for chat in real time using socket.io",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon index.js",
+    "start": "node index.js"
+  },
+  "author": "francisco gustavo (@frcgustavo)",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FranciscoGustavo/chat.git"
+  },
+  "keywords": [
+    "chat",
+    "real",
+    "time"
+  ],
+  "bugs": {
+    "url": "https://github.com/FranciscoGustavo/chat/issues"
+  },
+  "homepage": "https://github.com/FranciscoGustavo/chat#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "socket.io": "^2.3.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  }
+}
