@@ -1,17 +1,17 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
+
+import Login from './components/Login';
+import Chat from './components/Chat';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Bulding a Chat
-        </p>
-      </header>
-    </div>
+    <BrowserRouter>
+      <Switch>
+        <Route path="/" exact component={Login} />
+        <Route path="/chat" exact component={Chat} />
+      </Switch>
+    </BrowserRouter>
   );
 }
 
