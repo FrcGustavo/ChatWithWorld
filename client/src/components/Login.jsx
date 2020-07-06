@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-const Login = () => {
+const Login = ({ history }) => {
     const [name, setName] = useState('');
     const [room, setRoom] = useState('');
 
@@ -13,7 +13,12 @@ const Login = () => {
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        alert(`Hola ${name} estas entrando a la sala ${room}`);
+        if (!name || !room || name === '' || room === '') {
+            alert('Please write all fields');
+            return false;
+        }
+        history.push(`chat?name=${name}&room=${room}`);
+        
     };
     
     return (
