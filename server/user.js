@@ -13,7 +13,7 @@ const addUser = ({ id, name, room }) => {
     const existedUser = users.find((user) => (user.name ===currentUser.name && user.room ===currentUser.room));
     if (existedUser) return { error: 'Username is taken.' };
 
-    users.push({ id, name, room });
+    users.push(currentUser);    
     return { user: currentUser };
 };
 
