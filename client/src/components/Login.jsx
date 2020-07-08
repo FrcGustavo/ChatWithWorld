@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 
+import '../App.css';
+
 const Login = ({ history }) => {
     const [name, setName] = useState('');
     const [room, setRoom] = useState('');
@@ -22,14 +24,23 @@ const Login = ({ history }) => {
     };
     
     return (
-        <div>
-            <form onSubmit={handleSubmit} >
-                <div>
-                    <input type="text" name="name" placeholder="Nombre" onChange={handleChange} />
-                    <input type="text" name="room" placeholder="Sala" onChange={handleChange} />
-                </div>
-                <input type="submit" value="Entrar" />
-            </form>
+        <div className="login-container">
+            <div className="login">
+                <h1>Entrar a la sala</h1>
+                <form onSubmit={handleSubmit} >
+                    <div>
+                        <div>
+                            <label htmlFor="">Nombre:</label>
+                            <input type="text" name="name" placeholder="Escribe tu nombre" onChange={handleChange} />
+                        </div>
+                        <div>
+                            <label htmlFor="">Sala:</label>
+                            <input type="text" name="room" placeholder="Escribe el nombre de la sala" onChange={handleChange} />
+                        </div>
+                    </div>
+                    <input type="submit" value="Entrar" />
+                </form>
+            </div>
         </div>
     );
 }
