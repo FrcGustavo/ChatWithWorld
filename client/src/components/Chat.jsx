@@ -17,7 +17,7 @@ const Chat = () => {
         
         socket = io('http://localhost:5000');
 
-        setName(name);
+        setName(name.trim().toLocaleLowerCase());
         setRoom(room);
         
         socket.emit('join', { name, room }, (error) => {
@@ -55,16 +55,26 @@ const Chat = () => {
     };
 
     return (
-        <div>
-            <h1>Nombre: {name} Sala: {room}</h1>
-            {
-                messages.map(m => <p key={m.text}>{m.text}</p>)
-            }
-            {
-                users === '' ? null : users.map(m => <p key={m.name}>{m.name}</p>)
-            }
-            <input type="text" onChange={handleChange} value={message} />
-            <input type="button" value="Enviar" onClick={sendMessage} />
+        <div className="chat-room">
+            <div className="container">
+                <div className="chat">
+                    <div className="messages">
+                        {
+                            messages.map(m => <p key={m.text} className={m.user === name ? 'message message-me' : 'message' }>{m.text}</p>)
+                        }
+                    </div>
+                    <div className="chat-input">
+                        <input type="text" onChange={handleChange} value={message} placeholder="Escribe un mensaje"/>
+                        <input type="button" value="Enviar" onClick={sendMessage} />
+                    </div>
+                </div>
+                <div className="people">
+                    <h2>Activos</h2>
+                    {
+                        users === '' ? null : users.map(m => <p key={m.name}>{m.name}</p>)
+                    }
+                </div>
+            </div>
         </div>
     );
 };
