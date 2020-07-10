@@ -25,7 +25,7 @@ const Chat = () => {
                 console.log('MI ERROR', error);
             }
         });
-    }, [window.location.search]);
+    }, []);
 
     useEffect(() => {
         socket.on('message', (message) => {
@@ -58,6 +58,7 @@ const Chat = () => {
         <div className="chat-room">
             <div className="container">
                 <div className="chat">
+                    <h2>Sala: {room}</h2>
                     <div className="messages">
                         {
                             messages.map(m => <p key={m.text} className={m.user === name ? 'message message-me' : 'message' }>{m.text}</p>)

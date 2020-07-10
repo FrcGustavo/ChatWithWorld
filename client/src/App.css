@@ -1,5 +1,11 @@
 #root {
-  background-color: red;
+  --bg: #FAFAFA;
+  --p-color: #82A6DF /*#4B2C7A*/;
+  --text-b: #252525;
+  --text-l: #545454;
+  --shadow: 0 0 3px rgba(0, 0, 0, .16);
+  background-color: var(--bg);
+  color: var(--text-b);
   width: 100vw;
   height: 100vh;
 }
@@ -18,6 +24,7 @@
   padding: 28px;
   border-radius: 7px;
   background-color: #fff;
+  box-shadow: var(--shadow);
 }
 
 .login h1 {
@@ -42,7 +49,7 @@
 }
 
 .login form div div input {
-  color: #454545;
+  color: var(--text-b);
   padding-left: 7px;
 }
 
@@ -51,9 +58,10 @@
 }
 
 .login form input[type="submit"] {
-  background-color: red;
+  background-color: var(--p-color);
   padding: 7px 14px;
   border-radius: 7px;
+  box-shadow: var(--shadow);
   text-transform: uppercase;
   cursor: pointer;
   font-weight: 600;
@@ -77,12 +85,13 @@
   max-width: 500px;
   padding: 14px;
   border-radius: 7px;
+  box-shadow: var(--shadow);
   background-color: #fff;
 }
 
 .chat-room .container .chat {
   display: grid;
-  grid-template-rows: 1fr 40px;
+  grid-template-rows: auto 1fr 40px;
   overflow: hidden;
 }
 
@@ -90,8 +99,13 @@
   overflow-y: auto;
 }
 
+.chat-room .container .chat h2 {
+  font-size: 18px;
+  margin-bottom: 14px;
+}
+
 .chat-room .container .chat .message {  
-  background: #CCC;
+  background: rgba(0, 0, 0, 0.1);
   width: 80%;
   padding: 4.5px;
   border-radius: 7px;
@@ -99,14 +113,19 @@
 }
 
 .chat-room .container .chat .message.message-me {
-  background-color: #0FF0F0;
+  background-color: rgba(109, 221, 255, 0.233);
   margin-left: 20%;
 }
 
 .chat-room .container .chat .chat-input {
-  border-top: solid 1px gray;
+  border-top: solid 1px var(--text-l);
   display: grid;
   grid-template-columns: 1fr 70px;
+}
+
+.chat-room .container .chat .chat-input input[type="button"] {
+  text-transform: uppercase;
+  background-color: var(--p-color);
 }
 
 .chat-room .container .chat .chat-input input:focus {
@@ -114,7 +133,7 @@
 }
 
 .chat-room .container .people {
-  padding: 7px;
+  padding: 0px 7px;
 }
 
 .chat-room .container .people h2 {
