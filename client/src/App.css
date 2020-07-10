@@ -126,6 +126,7 @@
 .chat-room .container .chat .chat-input input[type="button"] {
   text-transform: uppercase;
   background-color: var(--p-color);
+  cursor: pointer;
 }
 
 .chat-room .container .chat .chat-input input:focus {

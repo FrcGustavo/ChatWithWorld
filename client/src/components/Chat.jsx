@@ -40,7 +40,6 @@ const Chat = () => {
     }, []);
 
     const handleChange = (event) => {
-        console.log(message);
         setMessage(event.target.value);
     };
 
@@ -49,9 +48,13 @@ const Chat = () => {
 
             if (message) {
                 socket.emit('sendMessage', message, () => setMessage(''));
-                console.log('Enviando');
-                
             }
+    };
+
+    const handleKeyDown = (event) => {
+        if (event.key === 'Enter') {
+            socket.emit('sendMessage', message, () => setMessage(''));
+        }
     };
 
     return (
@@ -65,7 +68,7 @@ const Chat = () => {
                         }
                     </div>
                     <div className="chat-input">
-                        <input type="text" onChange={handleChange} value={message} placeholder="Escribe un mensaje"/>
+                        <input type="text" onChange={handleChange} onKeyDown={handleKeyDown} value={message} placeholder="Escribe un mensaje"/>
                         <input type="button" value="Enviar" onClick={sendMessage} />
                     </div>
                 </div>
