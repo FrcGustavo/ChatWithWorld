@@ -1,5 +1,9 @@
 # ChatWithWorld
 
+Chat in real time with any it
+
+Live Demo: [ChatWithWorld](https://chatwithworld.netlify.app/)
+
 This repository content two projects
 * **Client** is a app created in React using create-react-app
 
