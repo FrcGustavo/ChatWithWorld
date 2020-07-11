@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "server for chat in real time using socket.io",
   "main": "index.js",
+  "engines": {
+    "node": "12.x"
+  },
   "scripts": {
     "dev": "nodemon index.js",
     "start": "node index.js"
@@ -23,6 +26,7 @@
   },
   "homepage": "https://github.com/FranciscoGustavo/chat#readme",
   "dependencies": {
+    "cors": "^2.8.5",
     "express": "^4.17.1",
     "socket.io": "^2.3.0"
   },

@@ -15,7 +15,7 @@ const Chat = () => {
         const name = query[2];
         const room = query[4];
         
-        socket = io('http://localhost:5000');
+        socket = io('https://ancient-lake-21433.herokuapp.com/');
 
         setName(name.trim().toLocaleLowerCase());
         setRoom(room);

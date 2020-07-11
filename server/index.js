@@ -1,6 +1,7 @@
 const http = require('http');
 const express = require('express');
 const socketio = require('socket.io');
+const cors = require('cors'); 
 
 const { addUser, removeUser, getUser, getUsersInRoom } = require('./user');
 
@@ -8,10 +9,10 @@ const app = express();
 const server = http.createServer(app);
 const io = socketio(server);
 
+app.use(cors());
+
 app.get('/', (req, res) => {
-    console.log('HELLO');
-    
-    res.send('Hello this proyect you can see in http://localhost:3000');
+    res.send('Hello');
 });
 
 io.on('connect', (socket) => {
