@@ -3,14 +3,13 @@ import PropTypes from 'prop-types';
 
 import { Span } from './styles';
 
-const Badge = ({ children }) => {
-  return (
-    <Span>{children}</Span>
-  )
-}
+const Badge = ({ children, active }) => (
+  <Span active={active}>{children}</Span>
+);
 
 Badge.propTypes = {
   children: PropTypes.element.isRequired,
+  active: PropTypes.bool.isRequired,
 };
 
 export default Badge

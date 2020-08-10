@@ -6,25 +6,36 @@ import Badge from '../../atoms/Badge';
 
 import { Div } from './styles';
 
-const MenuItem = ({ icon, label, badge }) => {
-  console.log(icon);
+const MenuItem = ({ icon, label, badge, active }) => {
+  console.log('HO', active);
   return (
-    <Button>
+    <Button active={active}>
       <>
-        <Div>
+        <Div active={active}>
           {icon}
           <span>{label}</span>
         </Div>
-        <Badge><>{badge}</></Badge>
+        {
+          badge ? <Badge active={active}><>{badge}</></Badge> : false
+        }
       </>
     </Button>
   )
 }
 
+MenuItem.defaultProps = {
+  badge: false,
+  active: false,
+};
+
 MenuItem.propTypes = {
   label: PropTypes.string.isRequired,
   icon: PropTypes.element.isRequired,
-  badge: PropTypes.string.isRequired,
+  badge: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.bool,
+  ]),
+  active: PropTypes.bool,
 };
 
 export default MenuItem

@@ -1,10 +1,10 @@
 import React from 'react';
-import { FaPhoneAlt, FaUserAlt, FaFacebookMessenger, FaUsers, FaRegSun, FaToggleOff, FaSignal, FaSearch } from 'react-icons/fa';
-import MenuItem from '../../molecules/MenuItem';
+import { FaRegSun, FaToggleOff, FaSignal, FaSearch } from 'react-icons/fa';
+import Menu from '../../organisms/Menu';
 
 import image from '../../../image.png'
 
-import { Container, Navbar, Chats, Messages, Profile, Menu, NavButton, Feet, Badge, ChatButton, Search } from './styles';
+import { Container, Navbar, Chats, Messages, Profile, NavButton, Feet, Badge, ChatButton, Search } from './styles';
 
 const Chat = () => (
   <Container>
@@ -16,34 +16,7 @@ const Chat = () => (
           <span />
         </h1>
       </Profile>
-      <Menu>
-        <MenuItem
-          label="Calls"
-          icon={<FaPhoneAlt />}
-          badge="1"
-        />
-        <NavButton>
-          <div>
-            <FaUserAlt />
-            <span>Contacts</span>
-          </div>
-        </NavButton>
-        <NavButton active>
-          <div>
-            <FaFacebookMessenger />
-            <span>Messages</span>
-          </div>
-          <Badge active>
-            <span>1</span>
-          </Badge>
-        </NavButton>
-        <NavButton>
-          <div>
-            <FaUsers />
-            <span>New Group</span>
-          </div>
-        </NavButton>
-      </Menu>
+      <Menu />
       <div>
         <NavButton>
           <div>
