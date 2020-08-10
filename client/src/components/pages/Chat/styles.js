@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
 display: grid;
-grid-template-columns: 300px 1fr 1fr;
+grid-template-columns: 280px 450px 1fr;
 width: 100%;
 height: 100%;
 overflow-y: auto;
@@ -16,7 +16,7 @@ padding: 28px;
 `;
 
 export const Chats = styled.div`
-background-color: green;
+padding: 28px;
 `;
 
 export const Messages = styled.div`
@@ -90,12 +90,69 @@ export const Badge = styled.div`
 display: flex;
 justify-content: center;
 align-items: center;
-width: ${props => props.active ? '17px' : '34px' };;
+min-width: 17px;
 height: 17px;
-border-radius: ${props => props.active ? '50%' : '14px' };
+border-radius: 8.5px;
+padding: 4.5px;
 background-color: ${props => props.active ? '#FFF' : '#56CCF2' };
 span {
   font-size: 12px;
   color: ${props => props.active ? '#56CCF2' : '#FFF' };
 }
-`; 
+`;
+
+export const ChatButton = styled.button`
+display: flex;
+justify-content: space-between;
+align-items: center;
+width: 100%;
+border-radius: 21px;
+padding: 14px;
+background-color: ${props => props.active ? '#56CCF2' : ''};
+cursor: pointer;
+
+div {
+  display: flex;
+}
+
+img {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%; 
+}
+
+div div {
+  display: block;
+  margin-left: 14px;
+  text-align: left;
+  color: ${props => props.active ? "#FFF" : "#252525"};
+  h3 {
+    margin-bottom: 7px;
+    font-size: 15px;
+  }
+}
+`;
+
+export const Search = styled.div`
+padding: 14px;
+padding-top: 0;
+margin-bottom: 14px;
+div {
+  display: flex;
+  border-radius: 14px;
+  background-color: #F1F1F1;
+  overflow: hidden;
+  input, label {
+    padding: 12px;
+    background-color: transparent;
+  }
+
+  label svg {
+    color: #BFBFBF;
+  }
+
+  input {
+    width: 100%;
+  }
+}
+`;

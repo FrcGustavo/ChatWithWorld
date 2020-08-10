@@ -1,9 +1,9 @@
 import React from 'react';
-import { FaPhoneAlt, FaUserAlt, FaFacebookMessenger, FaUsers, FaRegSun, FaToggleOff, FaSignal } from 'react-icons/fa';
+import { FaPhoneAlt, FaUserAlt, FaFacebookMessenger, FaUsers, FaRegSun, FaToggleOff, FaSignal, FaSearch } from 'react-icons/fa';
 
 import image from '../../../image.png'
 
-import { Container, Navbar, Chats, Messages, Profile, Menu, NavButton, Feet, Badge } from './styles';
+import { Container, Navbar, Chats, Messages, Profile, Menu, NavButton, Feet, Badge, ChatButton, Search } from './styles';
 
 const Chat = () => (
   <Container>
@@ -22,7 +22,7 @@ const Chat = () => (
             <span>Calls</span>
           </div>
           <Badge>
-            <span>16</span>
+            <span>1</span>
           </Badge>
         </NavButton>
         <NavButton>
@@ -75,10 +75,38 @@ const Chat = () => (
       </footer>
     </Navbar>
     <Chats>
-      <h1>Chats</h1>
-      <img src={image} alt="" style={{ width: '100%' }}/>
+      <Search>
+        <div>
+          <label htmlFor="">
+            <FaSearch />
+          </label>
+          <input type="text" placeholder="Search"/>
+        </div>
+      </Search>
+      <ChatButton>
+        <div>
+          <img src="https://res.cloudinary.com/dwapbqqbo/image/upload/v1592516678/frcgustavo_wl1wgk.jpg" alt=""/>
+          <div>
+            <h3>Aston Martin</h3>
+            <p>I am fine too</p>
+          </div>
+        </div>
+        <Badge>
+          <span>2</span>
+        </Badge>
+      </ChatButton>
+      <ChatButton active>
+        <div>
+          <img src="https://res.cloudinary.com/dwapbqqbo/image/upload/v1592516678/frcgustavo_wl1wgk.jpg" alt=""/>
+          <div>
+            <h3>Aston Martin <span/></h3>
+            <p>I am fine too</p>
+          </div>
+        </div>
+      </ChatButton>
     </Chats>
     <Messages>
+      <img src={image} alt="" style={{ width: '100%' }}/>
       <h1>Messages</h1>
     </Messages>
   </Container>
