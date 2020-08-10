@@ -1,11 +1,12 @@
 import React from 'react';
-import { FaRegSun, FaToggleOff, FaSignal, FaSearch } from 'react-icons/fa';
+import { FaRegSun, FaToggleOff, FaSearch } from 'react-icons/fa';
 import Menu from '../../organisms/Menu';
 import Profile from '../../molecules/Profile';
 
 import image from '../../../image.png'
 
 import { Container, Navbar, Chats, Messages, NavButton, Feet, Badge, ChatButton, Search } from './styles';
+import Footer from '../../molecules/Footer';
 
 const Chat = () => (
   <Container>
@@ -26,18 +27,7 @@ const Chat = () => (
           <FaToggleOff />
         </NavButton>
       </div>
-      <footer>
-        <NavButton>
-          <div>
-            <span>Connection</span>
-          </div>
-          <FaSignal />
-        </NavButton>
-        <Feet>
-          <span>Desktop</span>
-          <span>Version 1.0</span>
-        </Feet>
-      </footer>
+      <Footer />
     </Navbar>
     <Chats>
       <Search>
