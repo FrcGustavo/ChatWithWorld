@@ -26,39 +26,6 @@ background-color: yellow;
 export const Menu = styled.div`
 `;
 
-export const NavButton = styled.button`
-display: flex;
-justify-content: space-between;
-align-items: center;
-width: 100%;
-border-radius: 21px;
-padding: 14px;
-text-align: left;
-color: ${props => props.active ? "#FFF" : "#252525"};
-background-color: ${props => props.active ? '#56CCF2' : ''};
-cursor: pointer;
-div {
-  display: flex;
-  align-items: center;
-}
-
-div svg {
-  margin-right: 14px;
-  color: ${props => props.active ? "#FFF" : "#252525"};
-}
-`
-
-export const Feet = styled.div`
-display: flex;
-justify-content: space-between;
-padding: 7px 14px;
-span {
-  font-size: 12px;
-  font-weight: lighter;
-  opacity: 0.8;
-}
-`;
-
 export const Badge = styled.span`
 display: flex;
 justify-content: center;
