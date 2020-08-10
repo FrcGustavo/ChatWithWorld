@@ -1,5 +1,6 @@
 import React from 'react';
 import { FaPhoneAlt, FaUserAlt, FaFacebookMessenger, FaUsers, FaRegSun, FaToggleOff, FaSignal, FaSearch } from 'react-icons/fa';
+import MenuItem from '../../molecules/MenuItem';
 
 import image from '../../../image.png'
 
@@ -16,15 +17,11 @@ const Chat = () => (
         </h1>
       </Profile>
       <Menu>
-        <NavButton>
-          <div>
-            <FaPhoneAlt />
-            <span>Calls</span>
-          </div>
-          <Badge>
-            <span>1</span>
-          </Badge>
-        </NavButton>
+        <MenuItem
+          label="Calls"
+          icon={<FaPhoneAlt />}
+          badge="1"
+        />
         <NavButton>
           <div>
             <FaUserAlt />
