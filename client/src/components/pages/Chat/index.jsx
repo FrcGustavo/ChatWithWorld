@@ -1,21 +1,16 @@
 import React from 'react';
 import { FaRegSun, FaToggleOff, FaSignal, FaSearch } from 'react-icons/fa';
 import Menu from '../../organisms/Menu';
+import Profile from '../../molecules/Profile';
 
 import image from '../../../image.png'
 
-import { Container, Navbar, Chats, Messages, Profile, NavButton, Feet, Badge, ChatButton, Search } from './styles';
+import { Container, Navbar, Chats, Messages, NavButton, Feet, Badge, ChatButton, Search } from './styles';
 
 const Chat = () => (
   <Container>
     <Navbar>
-      <Profile>
-        <img src="https://res.cloudinary.com/dwapbqqbo/image/upload/v1592516678/frcgustavo_wl1wgk.jpg" alt=""/>
-        <h1>
-          <span>Francisco Gustavo</span>
-          <span />
-        </h1>
-      </Profile>
+      <Profile />
       <Menu />
       <div>
         <NavButton>
