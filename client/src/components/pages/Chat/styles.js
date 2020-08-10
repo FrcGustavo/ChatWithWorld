@@ -8,13 +8,6 @@ height: 100%;
 overflow-y: auto;
 `;
 
-export const Navbar = styled.div`
-display: flex;
-flex-direction: column;
-justify-content: space-between;
-padding: 28px;
-`;
-
 export const Chats = styled.div`
 padding: 28px;
 `;

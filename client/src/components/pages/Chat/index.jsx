@@ -1,22 +1,15 @@
 import React from 'react';
 import { FaSearch } from 'react-icons/fa';
-import Menu from '../../organisms/Menu';
-import Profile from '../../molecules/Profile';
 
+import Navbar from '../../organisms/Navbar';
 import image from '../../../image.png'
 
-import { Container, Navbar, Chats, Messages, Badge, ChatButton, Search } from './styles';
-import Footer from '../../molecules/Footer';
-import Settings from '../../molecules/Settings';
+import { Container, Chats, Messages, Badge, ChatButton, Search } from './styles';
+
 
 const Chat = () => (
   <Container>
-    <Navbar>
-      <Profile />
-      <Menu />
-      <Settings />
-      <Footer />
-    </Navbar>
+    <Navbar />
     <Chats>
       <Search>
         <div>
