@@ -86,7 +86,7 @@ span {
 }
 `;
 
-export const Badge = styled.div`
+export const Badge = styled.span`
 display: flex;
 justify-content: center;
 align-items: center;
