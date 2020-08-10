@@ -19,53 +19,6 @@ background-color: yellow;
 export const Menu = styled.div`
 `;
 
-export const Badge = styled.span`
-display: flex;
-justify-content: center;
-align-items: center;
-min-width: 17px;
-height: 17px;
-border-radius: 8.5px;
-padding: 4.5px;
-background-color: ${props => props.active ? '#FFF' : '#56CCF2' };
-span {
-  font-size: 12px;
-  color: ${props => props.active ? '#56CCF2' : '#FFF' };
-}
-`;
-
-export const ChatButton = styled.button`
-display: flex;
-justify-content: space-between;
-align-items: center;
-width: 100%;
-border-radius: 21px;
-padding: 14px;
-background-color: ${props => props.active ? '#56CCF2' : ''};
-cursor: pointer;
-
-div {
-  display: flex;
-}
-
-img {
-  width: 45px;
-  height: 45px;
-  border-radius: 50%; 
-}
-
-div div {
-  display: block;
-  margin-left: 14px;
-  text-align: left;
-  color: ${props => props.active ? "#FFF" : "#252525"};
-  h3 {
-    margin-bottom: 7px;
-    font-size: 15px;
-  }
-}
-`;
-
 export const Search = styled.div`
 padding: 14px;
 padding-top: 0;
