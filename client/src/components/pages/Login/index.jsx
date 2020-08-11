@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 
+import { Container, Div, H1 } from './styles';
+
 const Login = ({ history }) => {
     const [name, setName] = useState('');
     const [room, setRoom] = useState('');
@@ -22,9 +24,9 @@ const Login = ({ history }) => {
     };
     
     return (
-        <div className="login-container">
-            <div className="login">
-                <h1>Entrar a la sala</h1>
+        <Container>
+            <Div>
+                <H1>Entrar a la sala</H1>
                 <form onSubmit={handleSubmit} >
                     <div>
                         <div>
@@ -38,8 +40,8 @@ const Login = ({ history }) => {
                     </div>
                     <input type="submit" value="Entrar" />
                 </form>
-            </div>
-        </div>
+            </Div>
+        </Container>
     );
 }
 
