@@ -8,16 +8,18 @@ import { Wrapper, Img, Div } from './styles';
 
 const ChatButton = ({ name, message, badge, active }) => (
   <Button active={active}>
-    <Wrapper>
-      <Img src="https://res.cloudinary.com/dwapbqqbo/image/upload/v1592516678/frcgustavo_wl1wgk.jpg" alt=""/>
-      <Div active={active}>
-        <h3>{name}</h3>
-        <p>{message}</p>
-      </Div>
-    </Wrapper>
-    {
-      badge ? <Badge active={active}><>{badge}</></Badge> : false
-    }
+    <>
+      <Wrapper>
+        <Img src="https://res.cloudinary.com/dwapbqqbo/image/upload/v1592516678/frcgustavo_wl1wgk.jpg" alt=""/>
+        <Div active={active}>
+          <h3>{name}</h3>
+          <p>{message}</p>
+        </Div>
+      </Wrapper>
+      {
+        badge ? <Badge active={active}><>{badge}</></Badge> : false
+      }
+    </>
   </Button>
 );
 

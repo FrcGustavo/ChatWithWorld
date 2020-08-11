@@ -25,7 +25,13 @@ body, #root {
 }
 
 button {
+  cursor: pointer;
+  outline: none;
   background-color: transparent;
+}
+
+input {
+  outline: none;
 }
 `;
 
