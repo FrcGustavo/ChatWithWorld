@@ -2,10 +2,11 @@ import React from 'react';
 
 import Navbar from '../../organisms/Navbar';
 import ChatButton from '../../molecules/ChatButton';
+import Messages from '../../organisms/Messages';
 
 import Search from '../../atoms/InputSearch';
 
-import { Container, Chats, Messages } from './styles';
+import { Container, Chats } from './styles';
 
 const Chat = () => (
   <Container>
@@ -24,12 +25,7 @@ const Chat = () => (
         active
       />
     </Chats>
-    <Messages>
-      <div>
-        HOLA
-      </div>
-      <input type="text" placeholder="HOLA" />
-    </Messages>
+    <Messages />
   </Container>
 );
 
