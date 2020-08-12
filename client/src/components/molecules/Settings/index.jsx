@@ -5,14 +5,21 @@ import MenuItem from '../MenuItem';
 
 import { DarkModeButton } from './styles.js';
 
-const Settings = () => (
-  <div>
-    <MenuItem label="Settings" icon={<FaRegSun />} />
-    <DarkModeButton>
-      <span>Dark Mode</span>
-      <FaToggleOff />
-    </DarkModeButton>
-  </div>
-);
+const Settings = () => {
+  const customEvent = new CustomEvent('theme-dark', { bubbles: true });
+  const handleClick = (e) => {
+    e.target.dispatchEvent(customEvent);
+  };
+
+  return (
+    <div>
+      <MenuItem label="Settings" icon={<FaRegSun />} />
+      <DarkModeButton onClick={handleClick}>
+        <span>Dark Mode</span>
+        <FaToggleOff />
+      </DarkModeButton>
+    </div>
+  );
+};
 
 export default Settings;

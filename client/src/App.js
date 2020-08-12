@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import { createGlobalStyle } from 'styled-components'; 
 
@@ -37,14 +37,23 @@ input {
 }
 `;
 
-const theme = {
-  mode: 'dark',
-  primary: '#56CCF2',
-  light: '#FFF',
-  dark: '#242424',
-};
-
 function App() {
+  const [theme, setTheme] = useState({
+    mode: 'light',
+    primary: '#56CCF2',
+    light: '#FFF',
+    dark: '#242424',
+  });
+  useEffect(() => {
+    window.addEventListener('theme-dark', () => {
+      setTheme({ 
+        ...theme,
+        mode: theme.mode === 'dark' ? 'light' : 'dark'
+      });
+      console.log('EMITIDO');
+    });
+  }, [theme]);
+
   return (
     <BrowserRouter>
       <GlobalStyle />

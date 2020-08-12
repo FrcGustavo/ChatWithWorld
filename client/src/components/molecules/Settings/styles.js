@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const DarkModeButton = styled.div`
+export const DarkModeButton = styled.button`
 display: flex;
 justify-content: space-between;
 align-items: center;

@@ -15,7 +15,7 @@ display: block;
 margin-left: 14px;
 text-align: left;
 color: ${
-  props => props.theme.mode === 'dark'
+  props => (props.theme.mode === "dark" || props.active)
     ? props.theme.light
     : props.theme.dark
 };
