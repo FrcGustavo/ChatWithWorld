@@ -74,9 +74,14 @@ svg {
 `;
 
 export const MS = styled.div`
-> div {
-}
 overflow-y: auto;
+::-webkit-scrollbar {
+  height: 20px;
+}
+
+div {
+  padding-bottom: 14px;
+}
 `;
 
 export const SendMessage = styled.div`
@@ -119,6 +124,7 @@ input {
 
 export const UserMS = styled.div`
 text-align: ${props => props.sender ? 'right' : 'left' };
+padding: 14px 0;
 
 span {
   display: inline-block;
@@ -126,12 +132,8 @@ span {
   max-width: 300px;
   border-radius: 14px;
   padding: 14px;
+  text-align: left;
   background-color: ${props => props.sender ? '#56CCF2' : '#E2E2E2' };
   color: ${props => props.sender ? '#FFF' : '' };
 }
-`; 
-
-export const UserMST = styled.div`
-width: 300px;
-background-color: blue;
 `; 

@@ -7,7 +7,6 @@ import Badge from '../../atoms/Badge';
 import { Div } from './styles';
 
 const MenuItem = ({ icon, label, badge, active }) => {
-  console.log('HO', active);
   return (
     <Button active={active}>
       <>

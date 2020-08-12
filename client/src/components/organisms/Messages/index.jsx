@@ -16,26 +16,28 @@ const Messages = () => (
         </HeaderMessages>
         <MS>
           <div>
-            <UserMS>
-              <span>
-                Hello Fiend
-              </span>
-            </UserMS>
-            <UserMS sender>
-              <span>
-                Hello Fiend
-              </span>
-            </UserMS>
-            <UserMS>
-              <span>
-                Hello Fiend
-              </span>
-            </UserMS>
-            <UserMS sender>
-              <span>
-                Hello Fiend
-              </span>
-            </UserMS>
+            {
+              [1,2,3,4,5,6,7,8,9,10].map((num, idx) => {
+                if(num % 2 === 0) {
+                  return (
+                    <UserMS key={idx}>
+                      <span>
+                        Hello Friend
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat doloremque necessitatibus ipsa natus consectetur consequuntur ducimus quia!
+                      </span>
+                    </UserMS>
+                  );
+                }
+                return (
+                  <UserMS sender key={idx}>
+                    <span>
+                      Hello Friend
+                      Quia reiciendis nulla reprehenderit sint, quam accusantium necessitatibus perferendis, exercitationem voluptates ullam voluptatum.
+                    </span>
+                  </UserMS>
+                );
+              })
+            }
           </div>
         </MS>
       </div>
