@@ -5,6 +5,8 @@ import { createGlobalStyle } from 'styled-components';
 import Login from './components/pages/Login';
 import Chat from './components/pages/Chat';
 
+import { ThemeProvider } from 'styled-components';
+
 const GlobalStyle = createGlobalStyle`
 * {
   margin: 0;
@@ -35,13 +37,22 @@ input {
 }
 `;
 
+const theme = {
+  mode: 'dark',
+  primary: '#56CCF2',
+  light: '#FFF',
+  dark: '#242424',
+};
+
 function App() {
   return (
     <BrowserRouter>
       <GlobalStyle />
       <Switch>
-        <Route path="/" exact component={Login} />
-        <Route path="/chat" exact component={Chat} />
+        <ThemeProvider theme={theme} >
+          <Route path="/" exact component={Login} />
+          <Route path="/chat" exact component={Chat} />
+        </ThemeProvider>
       </Switch>
     </BrowserRouter>
   );

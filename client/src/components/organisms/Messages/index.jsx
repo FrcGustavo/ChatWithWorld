@@ -1,7 +1,7 @@
 import React from 'react';
 import { FaEllipsisV, FaPlus, FaCat, FaMicrophone } from 'react-icons/fa';
 
-import { Div, Container, HeaderMessages, MS, SendMessage, UserMS, UserMST } from './styles';
+import { Div, Container, HeaderMessages, MS, SendMessage, UserMS } from './styles';
 
 const Messages = () => (
   <Div>

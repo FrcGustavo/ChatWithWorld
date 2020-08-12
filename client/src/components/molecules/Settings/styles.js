@@ -8,4 +8,9 @@ width: 100%;
 border-radius: 21px;
 padding: 14px;
 text-align: left;
+color: ${
+  props => props.theme.mode === 'dark'
+    ? props.theme.light
+    : props.theme.dark
+}
 `;

@@ -19,8 +19,7 @@ const Login = ({ history }) => {
             alert('Please write all fields');
             return false;
         }
-        history.push(`chat?name=${name}&room=${room}`);
-        
+        history.push(`chat?name=${name}&room=${room}`);  
     };
     
     return (

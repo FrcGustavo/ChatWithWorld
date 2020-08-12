@@ -15,6 +15,11 @@ h1 {
   align-items: center;
   span {
     font-size: 21px;
+    color: ${
+      props => props.theme.mode === "dark" 
+        ? '#FFF'
+        : '#242424'
+      };
   }
   span:last-child {
     display: inline-block;
