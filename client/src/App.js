@@ -3,7 +3,7 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import { createGlobalStyle } from 'styled-components'; 
 
 import Login from './components/pages/Login';
-import Chat from './components/pages/Chat';
+import ChatApp from './components/pages/ChatApp';
 
 import { ThemeProvider } from 'styled-components';
 
@@ -60,7 +60,7 @@ function App() {
       <Switch>
         <ThemeProvider theme={theme} >
           <Route path="/" exact component={Login} />
-          <Route path="/chat" exact component={Chat} />
+          <Route path="/app/*" component={ChatApp} />
         </ThemeProvider>
       </Switch>
     </BrowserRouter>
