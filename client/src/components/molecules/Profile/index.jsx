@@ -1,15 +1,17 @@
 import React from 'react';
 
-import { Div } from './styles';
+import Avatar from '../../atoms/Avatar';
 
-const Profile = () => (
-  <Div>
-    <img src="https://res.cloudinary.com/dwapbqqbo/image/upload/v1592516678/frcgustavo_wl1wgk.jpg" alt=""/>
+import { CSSProfile, CSSStatus } from './styles';
+
+const Profile = ({ img, name, status }) => (
+  <CSSProfile>
+    <Avatar src={img} large={true}/>
     <h1>
-      <span>Francisco Gustavo</span>
-      <span />
+      <span>{name}</span>
+      <CSSStatus status={status}/>
     </h1>
-  </Div>
+  </CSSProfile>
 );
 
 export default Profile;
