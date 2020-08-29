@@ -2,6 +2,7 @@ import React from 'react';
 import { FaEllipsisV, FaPlus, FaCat, FaMicrophone } from 'react-icons/fa';
 
 import CardMessage from '../../atoms/CardMessage';
+import Message from '../../atoms/Message';
 import { Div, Container, HeaderMessages, MS, SendMessage, UserMS } from './styles';
 
 const Messages = () => (
@@ -17,26 +18,11 @@ const Messages = () => (
       <MS>
         <div>
           {
-            [1,2,3,4,5,6,7,8,9,10].map((num, idx) => {
-              if(num % 2 === 0) {
-                return (
-                  <UserMS key={idx}>
-                    <span>
-                      Hello Friend
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat doloremque necessitatibus ipsa natus consectetur consequuntur ducimus quia!
-                    </span>
-                  </UserMS>
-                );
-              }
-              return (
-                <UserMS sender key={idx}>
-                  <span>
-                    Hello Friend
-                    Quia reiciendis nulla reprehenderit sint, quam accusantium necessitatibus perferendis, exercitationem voluptates ullam voluptatum.
-                  </span>
-                </UserMS>
-              );
-            })
+            [1,2,3,4,5,6,7,8,9,10].map((num, idx) => (
+              <Message key={idx} sender={num % 2 === 0}>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat doloremque necessitatibus ipsa natus consectetur consequuntur ducimus quia!
+              </Message>
+            ))
           }
         </div>
       </MS>
