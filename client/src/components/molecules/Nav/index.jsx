@@ -6,30 +6,34 @@ import {
   FaUsers,
 } from "react-icons/fa";
 
-import MenuItem from '../../molecules/MenuItem';
+import NavItem from '../../atoms/NavItem';
 
-const Menu = () => (
+const Nav = () => (
   <div>
-    <MenuItem 
+    <NavItem
+      to="/app/calls" 
       label="Calls"
       icon={<FaPhoneAlt />}
       badge="16" 
     />
-    <MenuItem 
+    <NavItem
+      to="/app/contacts" 
       label="Contacts"
       icon={<FaUserAlt />}
     />
-    <MenuItem 
+    <NavItem
+      to="/app/messages"
       label="Messages"
       icon={<FaFacebookMessenger />}
       badge="1" 
-      active
+      active={true}
     />
-    <MenuItem 
+    <NavItem
+      to="/app/new-group" 
       label="New Group"
       icon={<FaUsers />}
     /> 
   </div>
 );
 
-export default Menu;
+export default Nav;
