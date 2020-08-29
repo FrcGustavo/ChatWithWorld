@@ -1,5 +1,5 @@
 import styled from 'styled-components';
 
-export const Chats = styled.div`
+export const Container = styled.div`
 padding: 28px;
 `;
