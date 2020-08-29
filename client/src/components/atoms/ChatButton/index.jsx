@@ -1,26 +1,26 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import Badge from '../../atoms/Badge';
-import Button from '../../atoms/Button';
+import Badge from '../Badge';
+import Avatar from '../Avatar';
 
-import { Wrapper, Img, Div } from './styles';
+import { CSSLink, Wrapper, Div } from './styles';
 
-const ChatButton = ({ name, message, badge, active }) => (
-  <Button active={active}>
-    <>
+const ChatButton = ({ name, message, badge, active, to }) => (
+  <CSSLink to={to} active={active}>
       <Wrapper>
-        <Img src="https://res.cloudinary.com/dwapbqqbo/image/upload/v1592516678/frcgustavo_wl1wgk.jpg" alt=""/>
+        <Avatar 
+          src="https://res.cloudinary.com/dwapbqqbo/image/upload/v1592516678/frcgustavo_wl1wgk.jpg" 
+          alt={name}
+        />
         <Div active={active}>
           <h3>{name}</h3>
           <p>{message}</p>
         </Div>
       </Wrapper>
-      {
-        badge ? <Badge active={active}><>{badge}</></Badge> : false
-      }
-    </>
-  </Button>
+      
+      {badge ? <Badge active={active}><>{badge}</></Badge> : null}
+  </CSSLink>
 );
 
 ChatButton.defaultProps = {

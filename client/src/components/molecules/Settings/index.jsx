@@ -1,7 +1,7 @@
 import React from 'react';
 import { FaRegSun, FaToggleOff, } from 'react-icons/fa';
 
-import MenuItem from '../MenuItem';
+import NavItem from '../../atoms/NavItem';
 
 import { DarkModeButton } from './styles.js';
 
@@ -13,7 +13,7 @@ const Settings = () => {
 
   return (
     <div>
-      <MenuItem label="Settings" icon={<FaRegSun />} />
+      <NavItem label="Settings" icon={<FaRegSun />} />
       <DarkModeButton onClick={handleClick}>
         <span>Dark Mode</span>
         <FaToggleOff />

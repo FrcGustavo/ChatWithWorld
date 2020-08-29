@@ -1,7 +1,6 @@
 import React from 'react';
 
-import Navbar from '../../../organisms/Navbar';
-import ChatButton from '../../../molecules/ChatButton';
+import ChatButton from '../../../atoms/ChatButton';
 import Messages from '../../../organisms/Messages';
 
 import Search from '../../../atoms/InputSearch';
@@ -14,11 +13,13 @@ const Chat = () => (
     <Chats>
       <Search />
       <ChatButton
+        to="/"
         name="Francisco Gustavo"
         message="Hello friend in hard code"
         badge="16"
       />
       <ChatButton
+        to="/"
         name="Francisco Gustavo"
         message="Hello friend in hard code"
         badge="1"
@@ -26,7 +27,7 @@ const Chat = () => (
         />
     </Chats>
     <Route exact path="/app/chat" component={Messages} />
-    <Route exact path="/app/chat/:id" component={Messages} /> 
+    <Route exact path="/app/chat/:id" component={Messages} />
   </Router>
 );
 
