@@ -22,8 +22,8 @@ const Nav = () => (
       icon={<FaUserAlt />}
     />
     <NavItem
-      to="/app/messages"
-      label="Messages"
+      to="/app/chat/"
+      label="Chat"
       icon={<FaFacebookMessenger />}
       badge="1" 
       active={true}

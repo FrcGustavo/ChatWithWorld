@@ -10,7 +10,7 @@ import { BrowserRouter as Router, Route } from 'react-router-dom';
 import { Container, Chats } from './styles';
 
 const Chat = () => (
-  <>
+  <Router>
     <Chats>
       <Search />
       <ChatButton
@@ -23,21 +23,11 @@ const Chat = () => (
         message="Hello friend in hard code"
         badge="1"
         active
-      />
+        />
     </Chats>
-    <Router>
-      <Route exact path="/app/chat/:id" component={Messages} /> 
-    </Router>
-  </>
+    <Route exact path="/app/chat" component={Messages} />
+    <Route exact path="/app/chat/:id" component={Messages} /> 
+  </Router>
 );
 
-/*
-const Chat = () => (
-  <Container>
-    <Navbar />
-
-    
-  </Container>
-);
-*/
 export default Chat;

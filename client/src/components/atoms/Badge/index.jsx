@@ -8,7 +8,7 @@ const Badge = ({ children, active }) => (
 );
 
 Badge.propTypes = {
-  children: PropTypes.element.isRequired,
+  children: PropTypes.string.isRequired,
   active: PropTypes.bool.isRequired,
 };
 

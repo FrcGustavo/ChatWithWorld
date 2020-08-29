@@ -6,7 +6,7 @@ import { CSSProfile, CSSStatus } from './styles';
 
 const Profile = ({ img, name, status }) => (
   <CSSProfile>
-    <Avatar src={img} large={true}/>
+    <Avatar src={img} alt={name} large={true}/>
     <h1>
       <span>{name}</span>
       <CSSStatus status={status}/>

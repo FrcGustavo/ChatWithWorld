@@ -23,4 +23,12 @@ storiesOf('atoms / Buttons', module)
       label="Chats"
       active={true}
     />
+  ))
+  .add('NavItem Whitout Badge', () => (
+    <NavItem 
+      to="#"
+      icon={<FaHome />}
+      label="Chats"
+      active={true}
+    />
   ));

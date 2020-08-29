@@ -9,7 +9,7 @@ import { Div } from './styles';
 
 const Navbar = () => (
   <Div>
-    <Profile />
+    <Profile img="/" name="Gustavo" status="active" />
     <Nav />
     <Settings />
     <Footer />
