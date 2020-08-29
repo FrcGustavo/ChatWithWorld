@@ -3,18 +3,16 @@ import { FaEllipsisV, FaPlus, FaCat, FaMicrophone } from 'react-icons/fa';
 
 import CardMessage from '../../atoms/CardMessage';
 import Message from '../../atoms/Message';
+import HeaderMessage from '../../molecules/HeaderMessage';
 import { Div, Container, HeaderMessages, MS, SendMessage, UserMS } from './styles';
 
 const Messages = () => (
   <CardMessage>
     <div>
-      <HeaderMessages>
-        <div>
-          <img src="https://res.cloudinary.com/dwapbqqbo/image/upload/v1592516678/frcgustavo_wl1wgk.jpg" alt="" />
-          <h3>Francisco Gustavo</h3>
-        </div>
-        <button><FaEllipsisV /></button>
-      </HeaderMessages>
+      <HeaderMessage 
+        img="https://res.cloudinary.com/dwapbqqbo/image/upload/v1592516678/frcgustavo_wl1wgk.jpg"
+        name="Francisco Gustavo"
+      />
       <MS>
         <div>
           {

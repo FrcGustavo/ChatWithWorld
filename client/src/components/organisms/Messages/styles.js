@@ -26,51 +26,7 @@ box-shadow: 0 0 7px ${
 `;
 
 export const HeaderMessages = styled.header`
-display: flex;
-justify-content: space-between;
-align-items: center; 
-padding-bottom: 14px;
 
-div {
-  display: flex;
-  align-items: center; 
-}
-
-img {
-  width: 35px;
-  height: 35px;
-  border-radius: 50%;
-}
-
-h3 {
-  position: relative;
-  margin-left: 14px;
-  font-size: 15px;
-  color: ${
-    props => props.theme.mode === 'dark'
-      ? props.theme.light
-      : props.theme.dark
-  };
-}
-h3:after {
-  content: '';
-  position: absolute;
-  top: 6px;
-  right: -24px;
-  display: block;
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background-color: #88F1A5;
-}
-
-svg {
-  color: ${
-    props => props.theme.mode === 'dark'
-      ? props.theme.light
-      : props.theme.dark
-  };
-}
 `;
 
 export const MS = styled.div`
