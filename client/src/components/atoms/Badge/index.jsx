@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import { Span } from './styles';
 
 const Badge = ({ children, active }) => (
-  <Span active={active}>{children}</Span>
+  <Span active={active} isCircle={children.length === 1} >{children}</Span>
 );
 
 Badge.propTypes = {
