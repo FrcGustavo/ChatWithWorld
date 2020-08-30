@@ -2,7 +2,7 @@ import React from 'react';
 
 import { CSSInputText } from './styles';
 
-const InputText = ({ type, name, label, placeholder }) => (
+const InputText = ({ type, name, label, placeholder, handleChange }) => (
   <CSSInputText>
       <label htmlFor={name}>
           {label}
@@ -11,6 +11,7 @@ const InputText = ({ type, name, label, placeholder }) => (
           type={type}
           name={name}
           placeholder={placeholder}
+          onChange={handleChange}
       />
   </CSSInputText>
 );
