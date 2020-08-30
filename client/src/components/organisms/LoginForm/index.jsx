@@ -3,6 +3,8 @@ import React, { useState  } from 'react';
 import InputText from '../../atoms/InputText';
 import InputSubmit from '../../atoms/InputSubmit';
 
+import { login } from '../../../services';
+
 import { CSSFormContainer, H1 } from './styles';
 
 const LoginForm = ({ history }) => {
@@ -10,7 +12,6 @@ const LoginForm = ({ history }) => {
   const [room, setRoom] = useState('');
 
   const handleChange = (event) => {
-      console.log(event.target.value);
       if (event.target.name === 'name')
           setName(event.target.value);
       if (event.target.name === 'room')
@@ -23,7 +24,12 @@ const LoginForm = ({ history }) => {
           alert('Please write all fields');
           return false;
       }
-      history.push(`/app/chat/`);  
+      login({ name, room })
+        .then((data) => {
+            console.log(data);
+            // history.push(`/app/chat/`);  
+        })
+        .catch((err) => console.log(err));
   };
 
   return (

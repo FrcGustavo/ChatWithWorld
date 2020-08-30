@@ -9,10 +9,19 @@ const app = express();
 const server = http.createServer(app);
 const io = socketio(server);
 
-app.use(cors());
+app.use(cors('*'));
+app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
 
 app.get('/', (req, res) => {
     res.send('Hello');
+});
+
+app.post('/api/login', (req, res, next) => {
+    const { name, room } = req.body;
+    console.log('HOLA MUNDO');
+    const { user, error } = addUser({ id: name + room, name, room })
+    res.json({ user, error });
 });
 
 io.on('connect', (socket) => {
