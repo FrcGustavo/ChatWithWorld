@@ -1,6 +1,10 @@
 import React, { useState } from 'react';
 
-import { Container, Div, H1 } from './styles';
+import InputText from '../../atoms/InputText';
+import InputSubmit from '../../atoms/InputSubmit';
+
+import { Container, CSSFormContainer, H1 } from './styles';
+
 
 const Login = ({ history }) => {
     const [name, setName] = useState('');
@@ -19,27 +23,29 @@ const Login = ({ history }) => {
             alert('Please write all fields');
             return false;
         }
-        history.push(`chat?name=${name}&room=${room}`);  
+        history.push(`/app/chat/`);  
     };
     
     return (
         <Container>
-            <Div>
+            <CSSFormContainer>
                 <H1>Entrar a la sala</H1>
                 <form onSubmit={handleSubmit} >
-                    <div>
-                        <div>
-                            <label htmlFor="">Nombre:</label>
-                            <input type="text" name="name" placeholder="Escribe tu nombre" onChange={handleChange} />
-                        </div>
-                        <div>
-                            <label htmlFor="">Sala:</label>
-                            <input type="text" name="room" placeholder="Escribe el nombre de la sala" onChange={handleChange} />
-                        </div>
-                    </div>
-                    <input type="submit" value="Entrar" />
+                    <InputText
+                        type="text"
+                        name="name"
+                        label="Nombre: "
+                        placeholder="Escribe tu nombre"
+                    />
+                    <InputText
+                        type="text"
+                        name="room"
+                        label="Sala: "
+                        placeholder="Escribe el nombre de la sala"
+                    />
+                    <InputSubmit>Entrar</InputSubmit>
                 </form>
-            </Div>
+            </CSSFormContainer>
         </Container>
     );
 }
