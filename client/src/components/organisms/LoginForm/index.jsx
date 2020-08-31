@@ -1,37 +1,11 @@
-import React, { useState  } from 'react';
+import React from 'react';
 
 import InputText from '../../atoms/InputText';
 import InputSubmit from '../../atoms/InputSubmit';
 
-import { login } from '../../../services';
-
 import { CSSFormContainer, H1 } from './styles';
 
-const LoginForm = ({ history }) => {
-  const [name, setName] = useState('');
-  const [room, setRoom] = useState('');
-
-  const handleChange = (event) => {
-      if (event.target.name === 'name')
-          setName(event.target.value);
-      if (event.target.name === 'room')
-          setRoom(event.target.value);
-  };
-
-  const handleSubmit = (event) => {
-      event.preventDefault();
-      if (!name || !room || name === '' || room === '') {
-          alert('Please write all fields');
-          return false;
-      }
-      login({ name, room })
-        .then((data) => {
-            console.log(data);
-            // history.push(`/app/chat/`);  
-        })
-        .catch((err) => console.log(err));
-  };
-
+const LoginForm = ({ handleSubmit, handleChange }) => {
   return (
     <CSSFormContainer>
       <H1>Entrar a la sala</H1>

@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import { createGlobalStyle } from 'styled-components'; 
 
+import UserProvider from './store';
 import Login from './components/pages/Login';
 import ChatApp from './components/pages/ChatApp';
 
@@ -58,10 +59,12 @@ function App() {
     <BrowserRouter>
       <GlobalStyle />
       <Switch>
-        <ThemeProvider theme={theme} >
-          <Route path="/" exact component={Login} />
-          <Route path="/app/*" component={ChatApp} />
-        </ThemeProvider>
+        <UserProvider>
+          <ThemeProvider theme={theme} >
+            <Route path="/" exact component={Login} />
+            <Route path="/app/*" component={ChatApp} />
+          </ThemeProvider>
+        </UserProvider>
       </Switch>
     </BrowserRouter>
   );

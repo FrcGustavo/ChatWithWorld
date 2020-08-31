@@ -7,9 +7,9 @@ import Footer from '../../molecules/Footer';
 
 import { Div } from './styles';
 
-const Navbar = () => (
+const Navbar = ({ user }) => (
   <Div>
-    <Profile img="/" name="Gustavo" status="active" />
+    <Profile img="/" name={user.name} status="active" />
     <Nav />
     <Settings />
     <Footer />

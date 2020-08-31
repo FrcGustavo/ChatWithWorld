@@ -11,7 +11,7 @@ const Chat = () => (
   <Router>
     <Chats />
     <Container>
-      <Route exact path="/app/chat/" component={NotMessages} />
+      <Route exact path="/app/chat" component={NotMessages} />
       <Route exact path="/app/chat/:id" component={Messages} />
     </Container>
   </Router>
