@@ -2,22 +2,15 @@ import React from 'react';
 
 import ChatButton from '../../atoms/ChatButton';
 
-const ChatsList = () => (
-  <>
+const ChatsList = ({ users }) => {
+  return users.map((user, idx) => (
     <ChatButton
-      to="/app/chat/my-id"
-      name="Francisco Gustavo"
-      message="Hello friend in hard code"
-      badge="16"
+      key={idx}
+      to={`/app/chat/${user.id}`}
+      name={user.name}
+      message=""
     />
-    <ChatButton
-      to="/app/chat/my-id"
-      name="Francisco Gustavo"
-      message="Hello friend in hard code"
-      badge="1"
-      active
-    />
-  </>
-);
+  ));
+};
 
 export default ChatsList;

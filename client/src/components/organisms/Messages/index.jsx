@@ -1,10 +1,10 @@
 import React from 'react';
-import { FaEllipsisV, FaPlus, FaCat, FaMicrophone } from 'react-icons/fa';
+import { FaPlus, FaCat, FaMicrophone } from 'react-icons/fa';
 
 import CardMessage from '../../atoms/CardMessage';
 import Message from '../../atoms/Message';
 import HeaderMessage from '../../molecules/HeaderMessage';
-import { Div, Container, HeaderMessages, MS, SendMessage, UserMS } from './styles';
+import { MS, SendMessage } from './styles';
 
 const Messages = () => (
   <CardMessage>

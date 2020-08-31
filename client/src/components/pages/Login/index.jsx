@@ -1,13 +1,13 @@
 import React, { useState, useContext } from 'react';
 
 import { UserContext } from '../../../store';
-import { login } from '../../../services';
+//import { login } from '../../../services';
 import LoginForm from '../../organisms/LoginForm';
 
 import { Container } from './styles';
 
 const Login = ({ history }) => {
-    const { state, dispatch } = useContext(UserContext);
+    const { dispatch } = useContext(UserContext);
     const [name, setName] = useState('');
     const [room, setRoom] = useState('');
   
